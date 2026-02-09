@@ -136,6 +136,13 @@ function App() {
               Jika ada satu hal yang ingin kuubah, itu adalah jarak di antara
               kita sekarang. Aku rindu, Olivia.
             </p>
+            <div className="audio-card">
+              <div className="audio-title">Lagu yang selalu mengingatkanmu</div>
+              <audio controls preload="metadata">
+                <source src="media/about-you.mp3" type="audio/mpeg" />
+                Browser kamu tidak mendukung audio.
+              </audio>
+            </div>
           </div>
           <div className="video-card">
             <video controls preload="metadata">
@@ -169,7 +176,7 @@ function App() {
           Aku simpan semua ini bukan untuk menahanmu, tapi untuk mengingat betapa
           berartinya kamu dalam hidupku.
         </p>
-        <div className="gallery">
+        <div className="gallery-slider">
           {galleryImages.map((image) => (
             <figure className="gallery-item fade-up" key={image.src}>
               <img src={image.src} alt={image.caption} loading="lazy" />
