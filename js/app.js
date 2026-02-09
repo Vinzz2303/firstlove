@@ -41,6 +41,29 @@ const memoryCards = [
   },
 ];
 
+const galleryImages = [
+  {
+    src: "media/memory-1.png",
+    caption: "Senyum yang selalu kutunggu.",
+  },
+  {
+    src: "media/memory-2.png",
+    caption: "Langit sore yang pernah kita bagi.",
+  },
+  {
+    src: "media/memory-3.png",
+    caption: "Hari biasa yang jadi istimewa.",
+  },
+  {
+    src: "media/memory-4.png",
+    caption: "Dekat tanpa perlu kata.",
+  },
+  {
+    src: "media/memory-5.png",
+    caption: "Jejak manis yang tak pergi.",
+  },
+];
+
 function App() {
   const [message, setMessage] = useState(
     "Jika hati kamu masih terbuka, izinkan aku menata ulang kisah kita."
@@ -136,6 +159,22 @@ function App() {
               <h5>{card.title}</h5>
               <p>{card.text}</p>
             </div>
+          ))}
+        </div>
+      </section>
+
+      <section className="section container">
+        <h2 className="section-title">Galeri kenangan kita</h2>
+        <p className="section-subtitle">
+          Aku simpan semua ini bukan untuk menahanmu, tapi untuk mengingat betapa
+          berartinya kamu dalam hidupku.
+        </p>
+        <div className="gallery">
+          {galleryImages.map((image) => (
+            <figure className="gallery-item fade-up" key={image.src}>
+              <img src={image.src} alt={image.caption} loading="lazy" />
+              <figcaption>{image.caption}</figcaption>
+            </figure>
           ))}
         </div>
       </section>
